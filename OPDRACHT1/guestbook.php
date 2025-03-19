@@ -12,6 +12,10 @@ try {
     die("Failed to open database connection, did you start it and configure the credentials properly?");
 }
 
+if (!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']) {
+    die("Invalid CSRF token! Possible CSRF attack detected.");
+}
+
 if (empty($_SESSION['token'])) {
     $_SESSION['token'] = bin2hex(random_bytes(32));
 }
@@ -60,6 +64,7 @@ $token = $_SESSION['token'];
     <hr/>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $_SESSION['token'] =  bin2hex(random_bytes(32));
         $email = $_POST['email'];
         $text = htmlspecialchars($_POST['text']);
         $admin = isset($_POST['admin']) ? 1 : 0;
@@ -76,9 +81,8 @@ $token = $_SESSION['token'];
         } else {
             die('wrong format email address');
         }
-        
-        
 
+    
     }
 
 
