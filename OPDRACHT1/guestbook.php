@@ -86,13 +86,17 @@ $token = $_SESSION['token'];
     }
 
 
-    $result = $conn->query("SELECT `email`, `text`, `color`, `admin` FROM `entries`");
+   $result = $conn->query("SELECT `email`, `text`, `color`, `admin` FROM `entries`");
     foreach ($result as $row) {
-        print "<div style=\"color: " . $row['color'] . "\">Email: " . $row['email'];
+        $email = htmlspecialchars($row['email']);
+        $text = htmlspecialchars($row['text']); // voorkomt XSS
+        $color = htmlspecialchars($row['color']);
+
+        print "<div style=\"color: $color\">Email: $email";
         if ($row['admin']) {
-            print '&#9812;';
+            print ' &#9812;';
         }
-        print ": " . $row['text'] . "</div><br/>";
+        print ": $text</div><br/>";
     }
 
 
