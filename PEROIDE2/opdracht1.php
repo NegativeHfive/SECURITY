@@ -1,6 +1,9 @@
 <?php
 
 $password = 'password1234';
-echo md5($password)
+$salt = 'nmuioas912fdfsf32';
+
+$saltedPassword = md5($salt . $password);
+echo md5($saltedPassword)
 
 ?>

@@ -1,0 +1,53 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4b8e0faeebe33b803ad439a9ca4136e2",
+    "packages": [
+        {
+            "name": "kkiernan/caesar-cipher",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kkiernan/caesar-cipher-php.git",
+                "reference": "30ef5e634ac1405be9c7c475d8401e298724cbe1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kkiernan/caesar-cipher-php/zipball/30ef5e634ac1405be9c7c475d8401e298724cbe1",
+                "reference": "30ef5e634ac1405be9c7c475d8401e298724cbe1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KKiernan\\": "src/KKiernan"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Encrypt, decrypt and crack messages using the simple Caesar Cipher algorithm.",
+            "support": {
+                "issues": "https://github.com/kkiernan/caesar-cipher-php/issues",
+                "source": "https://github.com/kkiernan/caesar-cipher-php/tree/master"
+            },
+            "time": "2017-05-05T12:13:55+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

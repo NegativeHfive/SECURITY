@@ -1,0 +1,13 @@
+{
+    "name": "kkiernan/caesar-cipher",
+    "license": "MIT",
+    "description": "Encrypt, decrypt and crack messages using the simple Caesar Cipher algorithm.",
+    "require-dev": {
+        "phpspec/phpspec": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "KKiernan\\": "src/KKiernan"
+        }
+    }
+}
